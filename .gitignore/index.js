@@ -26,3 +26,20 @@ client.on('message', function(message) {
         clearInterval(interval);  
      }
     })}});
+
+client.on('message', message => {
+   
+    if(message.content === "Bonjour"){
+        message.reply("salut");
+        console.log('Le bot dit bonjour');
+    }
+
+     if(message.content === "bonjour"){
+        message.reply("salut");
+        console.log('Le bot dit bonjour');
+    }
+
+     if(message.content === "yep"){
+        message.reply("salut");
+        console.log('Le bot dit bonjour');
+    }
