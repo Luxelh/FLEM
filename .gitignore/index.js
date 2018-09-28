@@ -1,10 +1,28 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+var client = new Discord.Client();
 
-bot.login(process.env.TOKEN)
+var prefix = "!";
 
-bot.on('message', function (message) {
-    if (message.content === '!ping') {
-        message.reply('pong !')
-    }
-})
+client.login(process.env.TOKEN);
+
+client.on("ready", function()  {
+    console.log("Bot prêt!")
+    client.user.setGame("!help    -> by shoumi")
+
+});
+
+const uneCommande = '!bot '
+
+
+client.on('message', message => {
+      if (message.content.startsWith(uneCommande)) {
+        const str = message.content.substring(uneCommande.length)
+      var interval = setInterval(function(){
+        message.channel.sendMessage(str)
+    } , 28800  * 1000);
+
+client.on('message', function(message) {
+     if (message.content === '!stop') {
+        clearInterval(interval);  
+     }
+    })}});
