@@ -10,4 +10,3 @@ client.on("ready", function()  {
     client.user.setGame("!help    -> by shoumi")
 
 });
-
