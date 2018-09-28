@@ -7,6 +7,6 @@ client.login(process.env.TOKEN);
 
 client.on("ready", function()  {
     console.log("Bot prêt!")
-    client.user.setGame("!help    -> by shoumi")
+    client.user.setGame("!help    -> by shoumi1")
 
 });
